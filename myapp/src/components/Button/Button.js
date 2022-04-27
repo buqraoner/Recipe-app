@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableWithoutFeedback, Image } from "react-native";
 
 import styles from "./Button.style";
 
@@ -7,12 +7,23 @@ import styles from "./Button.style";
 
 
 
-const Button = ({ onPress, children }) => {
+const Button = (props) => {
     return (
-        <TouchableOpacity onPress={onPress} style={styles.buttonStyle}>
-            <Text style={styles.textStyle}>{children}</Text>
-        </TouchableOpacity>
-    );
+        <View>
+            <TouchableWithoutFeedback style={styles.container}
+                onPress={props.onPress}
+            >
+                <View style={styles.card}>
+                    <Image style={styles.image}
+                        source={props.image}
+                    />
+                    <Text style={styles.text}>{props.mealName}</Text>
+                </View>
+            </TouchableWithoutFeedback>
+
+        </View>
+
+    )
 }
 
 
