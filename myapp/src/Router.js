@@ -8,7 +8,10 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./screens/HomeScreen";
 import FirstScreen from "./screens/FirstScreen";
 import MealList from "./screens/MealList";
+import MealDetail from "./screens/MealDetail";
 
+/*
+                */
 
 const Stack = createNativeStackNavigator();
 
@@ -43,7 +46,23 @@ function App() {
                 <Stack.Screen
                     name="MealList"
                     component={MealList}
+                    options=
+                    {{
+                        title: "Meal List",
+                        headerStyle: {
+                            backgroundColor: "#f4511e",
+                        },
+                        headerTintColor: "#fff",
+                        headerTitleStyle: {
+                            fontWeight: 'bold',
+                        },
+                    }}
                 />
+                <Stack.Screen
+                    name="MealDetail"
+                    component={MealDetail}
+                />
+                
             </Stack.Navigator>
         </NavigationContainer>
     )

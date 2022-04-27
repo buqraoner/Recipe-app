@@ -7,21 +7,18 @@ import styles from "./Button.style";
 
 
 
-const Button = (props) => {
+const Button = ({ title, onSelect, image }) => {
     return (
-        <View>
-            <TouchableWithoutFeedback style={styles.container}
-                onPress={props.onPress}
-            >
+        <TouchableWithoutFeedback onPress={onSelect}>
+            <View style={styles.container}>
                 <View style={styles.card}>
                     <Image style={styles.image}
-                        source={props.image}
+                        source={{ uri: image }}
                     />
-                    <Text style={styles.text}>{props.mealName}</Text>
+                    <Text style={styles.text}>{title}</Text>
                 </View>
-            </TouchableWithoutFeedback>
-
-        </View>
+            </View>
+        </TouchableWithoutFeedback>
 
     )
 }

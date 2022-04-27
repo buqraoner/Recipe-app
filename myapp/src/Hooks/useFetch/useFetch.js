@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Config from "react-native-config";
+
 
 const useFetch = (url) => {
     const [error, setError] = useState(null);
@@ -9,8 +9,7 @@ const useFetch = (url) => {
 
     const fetchData = async () => {
         try {
-            const { data: responseData } = await axios
-                .get(url);
+            const { data: responseData } = await axios.get(url);
             setData(responseData);
             setLoading(false);
         } catch (error) {
@@ -23,7 +22,7 @@ const useFetch = (url) => {
         fetchData();
     }, [])
 
-    return {error,loading,data}
+    return { error, loading, data }
 }
 
 export default useFetch;
