@@ -30,7 +30,7 @@ const MealList = ({ route, navigation }) => {
             .get(API + strCategory)
             .then(response => {
                 setMealList(response.data.meals);
-               
+
             })
             .catch(error => {
                 console.log(error);
@@ -42,8 +42,8 @@ const MealList = ({ route, navigation }) => {
     }, []);
 
 
-   // console.log(mealList);
-   // console.log("asfsa");
+    console.log(mealList);
+    // console.log("asfsa");
 
 
 

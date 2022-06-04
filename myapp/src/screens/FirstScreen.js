@@ -1,7 +1,9 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
- import Config from "react-native-config";
+import Config from "react-native-config";
+
+
 
 //Screens
 
@@ -16,14 +18,14 @@ const FirstScreen = ({ navigation }) => {
         <SafeAreaView style={styles.container}>
             <View style={styles.screen}>
                 <Text
-                    
+
                     style={styles.text}>
                     Tarifka App
-                    
+
                 </Text>
-                
+
                 <Button
-                    title="Log In"
+                    title="Let's Begin"
                     onPress={() => navigation.navigate("Home")}
                 />
 
