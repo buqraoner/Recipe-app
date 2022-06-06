@@ -1,2 +1,2 @@
-# Tarifka
-React Native HomeWork 3
+# Recipe app
+
